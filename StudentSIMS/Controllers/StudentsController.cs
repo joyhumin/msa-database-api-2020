@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentSIMS.Data;
 using StudentSIMS.Models;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace StudentSIMS.Controllers
 {
@@ -23,6 +24,7 @@ namespace StudentSIMS.Controllers
 
         // GET: api/Students
         [HttpGet]
+        [SwaggerOperation(Summary = "Get all students information in database")]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
         {
             return await _context.Student.ToListAsync();
@@ -30,6 +32,7 @@ namespace StudentSIMS.Controllers
 
         // GET: api/Students/5
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Get a student by StudentId")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
             var student = await _context.Student.FindAsync(id);
@@ -46,6 +49,7 @@ namespace StudentSIMS.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Change a student's information by StudentId")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
             if (id != student.StudentId)
@@ -78,6 +82,7 @@ namespace StudentSIMS.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
+        [SwaggerOperation(Summary = "Add a new student")]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {
             _context.Student.Add(student);
@@ -88,6 +93,7 @@ namespace StudentSIMS.Controllers
 
         // DELETE: api/Students/5
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete a student by StudentId")]
         public async Task<ActionResult<Student>> DeleteStudent(int id)
         {
             var student = await _context.Student.FindAsync(id);

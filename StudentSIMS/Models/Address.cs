@@ -16,8 +16,10 @@ namespace StudentSIMS.Models
         public int PostCode { get; set; }
         [Required]
         public string Country { get; set; }
-
-        //public int? StudentId { get; set; }
+        //Foreign Key
+        public int StudentId { get; set; }
+        //Navigation property
+        //Ref:https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-2
         public virtual Student Student { get; set; }
     }
 }
