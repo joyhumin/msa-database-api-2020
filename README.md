@@ -6,6 +6,7 @@
 
 # API and Database Description <a name = "database-and-api"></a>
 
+
 # API hosted on Azure <a name = "host-link"></a>
 [Azure link](https://msa-school-sims.azurewebsites.net/index.html)
 
