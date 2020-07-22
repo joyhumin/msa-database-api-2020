@@ -34,6 +34,7 @@ namespace StudentSIMS
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentSIMS", Version = "v1" });
+                c.EnableAnnotations();
             });
             services.AddCors();
         }
