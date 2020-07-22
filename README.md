@@ -1,14 +1,15 @@
-# Table of Content
-1. [Documentation](#database-and-api)
-2. [API link](#host-link)
-3. [Required Microsoft Learn Module](#module)
+# School database API
+This API is part of [Microsoft Student Accelorator](https://nzmsa.netlify.app/) 2020 [Database and API](https://github.com/NZMSA/2020-Phase-1/tree/master/Databases%20and%20API). 
+This is a simple API using Swagger UI that hoseted on Azure, you could access via [link](https://msa-school-sims.azurewebsites.net/index.html)
 
+## API documentation
 
-# API and Database Description <a name = "database-and-api"></a>
+### Parameters
 
+### Sample requests
+It has different end points
 
-# API hosted on Azure <a name = "host-link"></a>
-[Azure link](https://msa-school-sims.azurewebsites.net/index.html)
+### Response
 
-# Microsfot Learn Module<a name ="module"></a>
-need to complete
+### Status codes
+
