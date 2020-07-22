@@ -76,7 +76,7 @@ namespace StudentSIMS.Controllers
         }
 
         //PUT by student id
-        [HttpPut("{studentid}/{id}")]
+        [HttpPut("{id}/Student/{studentid}")]
         public async Task<IActionResult> PutAddressbyStudent(int id,  int studentid, Address address)
         {
             if (!StudentExists(studentid))
@@ -129,7 +129,7 @@ namespace StudentSIMS.Controllers
         // POST: api/Address/StudentId
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost("{studentid}")]
+        [HttpPost("Student/{studentid}")]
         public async Task<ActionResult<Address>> PostAddressbyStudent(int studentid, Address address)
         {
             //check if the student exists
@@ -138,12 +138,6 @@ namespace StudentSIMS.Controllers
             address.Student = student;
             _context.Address.Add(address);
             await _context.SaveChangesAsync();
-
-
-            //var updateAddress = await _context.Address.FirstOrDefaultAsync(a => a.AddressId == address.AddressId);
-            //_context.Entry(updateAddress).State = EntityState.Modified;
-            //updateAddress.Student = _context.Student.;
-            //await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAddress", new { id = address.AddressId }, address);
         }
