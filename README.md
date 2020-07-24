@@ -13,7 +13,7 @@ This service supports adding, viewing, modifying, and removing data of the datab
 # Database <a name="database"></a>
 There are two relations hosted in the database. One is called **Student** and another is called **Address**. We assume that each student related to 0 to more address, and each address related to at least one student. Address that not related to 0 student is not allowed in the database.
 
-In **Student** relation, there are 5 attributes.
+In **Student** relation, there are 7 attributes.
 
 | Attribute name     | Data type    | Description | Required?|
 | :------------- | :------------- | :------------|:----------|
@@ -123,7 +123,7 @@ Using **DELETE** method to delete a tuple in relation. Because of the constraint
 
 The HTTP status code `404` means a tuple matching the provided `id` does not exist in the databse.
 
-code `204` means a tuple matching the provided `id` delete successfully in the database. 
+code `204` means a tuple matching the provided `id` delete successfully in the database.
 
 
 # Microsoft Learn Module <a name="module"></a>
